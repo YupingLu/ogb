@@ -13,10 +13,7 @@ def decide_download(url):
     size = int(d.info()["Content-Length"])/GBFACTOR
 
     ### confirm if larger than 1GB
-    if size > 1:
-        return input("This will download %.2fGB. Will you proceed? (y/N)\n" % (size)).lower() == "y"
-    else:
-        return True
+    return True
 
 def makedirs(path):
     try:
